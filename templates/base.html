@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Data Science Products</title>
+
+    <!--===============================================================================================-->
+    
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='vendor/bootstrap/css/bootstrap.min.css') }}">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='vendor/fonts/font-awesome-4.7.0/css/font-awesome.min.css') }}">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='vendor/animate/animate.css') }}">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='vendor/css-hamburgers/hamburgers.min.css') }}">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='vendor/select2/select2.min.css') }}">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='vendor/css/util.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='vendor/css/main.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='vendor/css/files.css') }}">
+    <style>
+        #imag {
+            padding-left: 10px;
+            padding-top: 10px;
+            float: justify;
+            width: 30%;
+        }
+
+        #input {
+            font-family: Poppins-Medium;
+            font-size: 15px;
+            line-height: 1.5;
+            color: #666666;
+            visibility: visible;
+            display: block;
+            width: 100%;
+            background: #e6e6e6;
+            height: 50px;
+            border-radius: 25px;
+            padding: 0 30px 0 68px;
+        }
+    </style>
+
+<!-- Stylesheets Form -->
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" type="image/png" href="{{ url_for('static', filename='main/images/favicon2.ico') }}"/>
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='form/vendor/bootstrap/css/bootstrap.min.css') }}">
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='form/fonts/font-awesome-4.7.0/css/font-awesome.min.css') }}">
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='form/fonts/iconic/css/material-design-iconic-font.min.css') }}">
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='form/vendor/animate/animate.css') }}">
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='form/vendor/css-hamburgers/hamburgers.min.css') }}">
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='form/vendor/animsition/css/animsition.min.css') }}">
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='form/vendor/select2/select2.min.css') }}">
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='form/vendor/daterangepicker/daterangepicker.css') }}">
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='form/css/util.css') }}">
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='form/css/main.css') }}">
+<link rel="stylesheet" href="{{ url_for('static', filename='main/css/test.css') }}">
+
+<!-- Stylesheets -->
+<link href="{{ url_for('static', filename='main/css/style.css') }}" rel="stylesheet">
+<link href="{{ url_for('static', filename='main/css/responsive.css') }}" rel="stylesheet">
+
+<style>
+    @media screen and (max-width: 1024px) {
+        .hideAndSeekElementMax {
+            display: none;
+        }
+    }
+    @media screen and (min-width: 1024px) {
+        .header-top {
+            display: none;
+        }
+    }
+</style>
+
+</head>
+
+<!-- page wrapper -->
+<body class="boxed_wrapper">
+    <!-- Main Header -->
+    <header class="main-header">
+        <!-- header-top -->
+        <div class="header-top" style="background-color: white; padding-block: 15px">
+            <div class="container">
+                <div class="clearfix">
+                    <div class="logo-box top-left">
+                        <figure class="logo-box">
+                            <a href="https://riset.informatika.umm.ac.id/area_of_interest/1">
+                                <img src="{{ url_for('static', filename='main/images/logo.png') }}" 
+                                style="width: 55%; padding-block: 2px" alt="">
+                            </a>
+                        </figure>
+                    </div>
+                    <div class="top-right" style="padding-block: 0px">
+                        <ul class="header-info clearfix">
+                            <li style="text-align: center;">
+                                <a href="https://goo.gl/maps/9dBy31F2JoLYJFem8">
+                                    <i class="flaticon-marker"></i>Research information system of Informatics Department
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- header-top end -->
+        
+        <!-- header-bottom -->
+        <div class="header-bottom">
+            <div class="container">
+                <div class="nav-outer clearfix">
+                    <div class="menu-area">
+                        <nav class="main-menu navbar-expand-lg">
+                            <div class="navbar-header">
+                                <!-- Toggle Button -->
+                                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                                </button>
+                            </div>
+                            <div class="navbar-collapse collapse clearfix">
+                                <ul class="navigation clearfix">
+                                    <li class="hideAndSeekElementMax">
+                                        <figure class="logo-outer">
+                                            <a href="https://riset.informatika.umm.ac.id/area_of_interest/1">
+                                                <img src="{{ url_for('static', filename='main/images/logo.png') }}" 
+                                                style="width: 100%; max-width:500px; height: 100%; max-height:75px; padding-top: 3px; padding-right: 150px;" alt="">
+                                            </a>
+                                        </figure>
+                                    </li>
+                                    <li><a href="https://riset.informatika.umm.ac.id">Home</a></li>
+                                    <li class="dropdown"><a>Research Area</a>
+                                        <ul>
+                                            <li><a href="https://riset.informatika.umm.ac.id/area_of_interest/1">Data Science</a></li>
+                                            <li><a href="https://riset.informatika.umm.ac.id/area_of_interest/2">Software Engineering</a></li>
+                                            <li><a href="https://riset.informatika.umm.ac.id/area_of_interest/3">Network Security</a></li>
+                                            <li><a href="https://riset.informatika.umm.ac.id/area_of_interest/4">Game Technology</a></li>
+                                        </ul>
+                                    <div class="dropdown-btn"><span class="fa fa-angle-down"></span></div></li>
+                                    <li><a href="https://riset.informatika.umm.ac.id/about">About Us</a></li>
+                                    <li><a href="https://riset.informatika.umm.ac.id/contact">Contact Us</a></li>
+                                    <li class="current"><a href="https://riset.informatika.umm.ac.id/register">Join and Login</a></li>
+                                </ul>
+                            </div>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- header-bottom end -->
+
+        <!--Sticky Header-->
+        <div class="sticky-header">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-4 col-md-12 col-sm-12 column">
+                        <figure class="logo-box">
+                            <a href="https://riset.informatika.umm.ac.id/area_of_interest/1">
+                                <img src="{{ url_for('static', filename='main/images/small-logo.png') }}" alt="">
+                            </a>
+                        </figure>
+                    </div>
+                    <div class="col-lg-8 col-md-12 col-sm-12 menu-column">
+                        <div class="menu-area">
+                            <nav class="main-menu navbar-expand-lg">
+                                <div class="navbar-collapse collapse clearfix">
+                                    <ul class="navigation clearfix">
+                                        <li><a href="https://riset.informatika.umm.ac.id">Home</a></li>
+                                        <li class="dropdown"><a>Research Area</a>
+                                            <ul>
+                                                <li><a href="https://riset.informatika.umm.ac.id/area_of_interest/1">Data Science</a></li>
+                                                <li><a href="https://riset.informatika.umm.ac.id/area_of_interest/2">Software Engineering</a></li>
+                                                <li><a href="https://riset.informatika.umm.ac.id/area_of_interest/3">Network Security</a></li>
+                                                <li><a href="https://riset.informatika.umm.ac.id/area_of_interest/4">Game Technology</a></li>
+                                            </ul>
+                                        <div class="dropdown-btn"><span class="fa fa-angle-down"></span></div></li>
+                                        <li><a href="https://riset.informatika.umm.ac.id/about">About Us</a></li>
+                                        <li><a href="https://riset.informatika.umm.ac.id/contact">Contact Us</a></li>
+                                        <li class="current"><a href="https://riset.informatika.umm.ac.id/register">Join and Login</a></li>
+                                    </ul>
+                                </div>
+                            </nav>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div><!-- sticky-header end -->
+        
+    </header>
+    <!-- End Main Header -->
+    {% block content %}{% endblock %}
+
+        <!-- main-footer -->
+        <footer class="main-footer" id="mian_footer" >
+            <div class="container">
+                <div class="widgets-section">
+                    <div class="row">
+                        <div class="col-lg-3 col-md-6 col-sm-12 footer-column">
+                            <div class="logo-widget footer-widget">
+                                <figure class="footer-logo"><a href="/"><img src="{{ url_for('static', filename='main/images/footer-logo.png') }}" alt=""></a></figure>
+                                <div class="text" style="text-align: justify;">We always provide the best service to make it easy for researchers to stimulate new research ideas in the field of informatics.</div>
+                                <ul class="footer-social clearfix">
+                                    <li><a href="mailto:?Subject=Simple Share Buttons&Body=I%20saw%20this%20and%20thought%20of%20you!%20 http://riset.informatika.umm.ac.id/"><i class="fa fa-envelope-o"></i></a></li>
+                                    <li><a href="http://www.facebook.com/sharer.php?u=http://riset.informatika.umm.ac.id/" target="_blank"><i class="fa fa-facebook"></i></a></li>
+                                    <li><a href="https://twitter.com/share?url=http://riset.informatika.umm.ac.id/&text=Simple%20Share%20Buttons&hashtags=simplesharebuttons" target="_blank"><i class="fa fa-twitter"></i></a></li>
+                                    <li><a href="https://www.linkedin.com/sharing/share-offsite/?url=http://riset.informatika.umm.ac.id/" target="_blank"><i class="fa fa-linkedin"></i></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-6 col-sm-12 footer-column">
+                            <div class="link-widget footer-widget">
+                                <div class="footer-title">Research Area</div>
+                                <ul class="link-list">
+                                    <li><a href="https://riset.informatika.umm.ac.id/area_of_interest/1">Data Science</a></li>
+                                    <li><a href="https://riset.informatika.umm.ac.id/area_of_interest/2">Software Engineering</a></li>
+                                    <li><a href="https://riset.informatika.umm.ac.id/area_of_interest/3">Network Security</a></li>
+                                    <li><a href="https://riset.informatika.umm.ac.id/area_of_interest/4">Game Technology</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-6 col-sm-12 footer-column">
+                            <div class="event-widget footer-widget">
+                                <div class="footer-title">Supported By</div>
+                                <div class="single-event">
+                                    <div class="link"><a href="http://www.umm.ac.id/"><img src="{{ url_for('static', filename='main/images/logos/logo_umm.png')}}" alt="Universitas Muhammadiyah Malang" style="width:155px;height:60px;"></a></div>
+                                </div>
+                                <div class="single-event">
+                                    <div class="link"><a href="http://informatika.umm.ac.id/"><img src="{{ url_for('static', filename='main/images/logos/logo_labit.png')}}" alt="Lab IT" style="width:140px;height:50px;"></a></div>
+                                </div>
+                                <div class="single-event">
+                                    <div class="link"><a href="https://infotech.umm.ac.id/"><img src="{{ url_for('static', filename='main/images/logos/logo.png')}}" alt="I-Lab" style="width:100px;height:40px;"></a></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-6 col-sm-12 footer-column">
+                            <div class="event-widget footer-widget">
+                                <div class="footer-title">Contact Us</div>
+                                <div class="text">Jl. Raya Tlogomas No.246, Jawa Timur 65144, Indonesia<br>
+                                Email :
+                                <div class="single-event">
+                                    <div class="link"><a href="mailto:lab.informatika.umm@gmail.com">lab.informatika.umm@gmail.com</a></div>
+                                    <div class="link"><a href="mailto:lab.informatika@umm.ac.id">lab.informatika@umm.ac.id</a></div>
+                                Phone :
+                                <br>
+                                    (0341) 464318, ext 252
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!-- main-footer end -->
+    
+        <!-- footer-bottom -->
+        <div class="footer-bottom">
+            <div class="container">
+                <div class="copyright"><a href="/">IRC-UMM</a> &copy; 2019 All Right Reserved. Developed by Infotech Research Division</div>
+            </div>
+        </div>
+        <!-- footer-bottom end -->
+    
+    <!--Scroll to top-->
+    <button class="scroll-top scroll-to-target" data-target="html">
+        <span class="fa fa-angle-up"></span>
+    </button>
+    
+    <script>
+    
+    var checker = document.getElementById('checkme');
+    var sendbtn = document.getElementById('send');
+    checker.onchange = function() {
+      sendbtn.disabled = !this.checked;
+    };
+        function change(value){
+        document.getElementById("count").value=value;
+        }
+        function readURL(input) {
+            if (input.files && input.files[0]) {
+                var reader = new FileReader();
+                
+                reader.onload = function(e) {
+                $('#preview').attr('src', e.target.result);
+                }
+                
+                reader.readAsDataURL(input.files[0]); // convert to base64 string
+            }
+        }
+    
+     </script>
+    
+    <!-- jequery plugins -->
+    <script src="{{ url_for('static', filename='main/js/jquery.js') }}"></script>
+    <script src="{{ url_for('static', filename='main/js/popper.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='main/js/bootstrap.min.js') }}"></script>
+    
+    <script src="{{ url_for('static', filename='main/js/owl.carousel.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='main/js/wow.js') }}"></script>
+    <script src="{{ url_for('static', filename='main/js/validation.js') }}"></script>
+    <script src="{{ url_for('static', filename='main/js/isotope.js') }}"></script>
+    <!-- <script src="{{ url_for('static', filename='js/html5lightbox/html5lightbox.js') }}"></script> -->
+    <script type="text/javascript" src="{{ url_for('static', filename='main/js/SmoothScroll.js') }}"></script>
+    
+    <!-- map script -->
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBevTAR-V2fDy9gQsQn1xNHBPH2D36kck0"></script>
+    <script src="{{ url_for('static', filename='main/js/gmaps.js') }}"></script>
+    <script src="{{ url_for('static', filename='main/js/map-helper.js') }}"></script>
+    
+    <!-- main-js -->
+    <script src="{{ url_for('static', filename='main/js/script.js') }}"></script>
+    
+    <!-- test js -->
+    <script src="{{ url_for('static', filename='main/js/test.js') }}"></script>
+    
+        <!--===============================================================================================-->
+        <script src="{{ url_for('static', filename='vendor/jquery/jquery-3.2.1.min.js') }}"></script>
+        <!--===============================================================================================-->
+        <script src="{{ url_for('static', filename='vendor/bootstrap/js/popper.js') }}"></script>
+        <script src="{{ url_for('static', filename='vendor/bootstrap/js/bootstrap.min.js') }}"></script>
+        <!--===============================================================================================-->
+        <script src="{{ url_for('static', filename='vendor/select2/select2.min.js') }}"></script>
+        <!--===============================================================================================-->
+        <script src="{{ url_for('static', filename='vendor/tilt/tilt.jquery.min.js') }}"></script>
+    
+        <script src="{{ url_for('static', filename='vendor/js/files.js') }}"></script>
+        <!--===============================================================================================-->
+        <script src="{{ url_for('static', filename='vendor/js/main.js') }}"></script>
+    </body><!-- End of .page_wrapper -->
+    </html>

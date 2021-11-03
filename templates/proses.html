@@ -1,0 +1,65 @@
+{% extends 'base.html' %}
+{% block content %}
+    <!-- form-section -->
+    <section class="contact-section" style="padding-top:50px;" id="predict1">
+        <div class="container">
+            <div class="title-box centred" id="architechture">
+                <div class="sec-title"><a class="sec-title" href="#predict1">Upload an Image</a> / <a class="sec-title" href="#predict2">Select an Image</a><br></div><br>
+            </div>
+
+            <!--image preview-->
+            <img id="image-preview" alt="image preview" src="#" style="width: 25%;"/>
+            
+            <!--form upload-->
+            <form class="login100-form validate-form" action="/proses1" method=post enctype=multipart/form-data>
+                <div class="container-login100-form-btn">
+                    <div class="column" >
+                        <div class="form-check form-check-inline"> 
+                            <select name="select_thresholding" id="selected_thresholding">
+                                <option value='otsu' name="mode">                             Otsu Thresholding       </option>
+                                <option value='niblack' name="mode">                          Niblack Thresholding    </option>
+                                <option value='sauvola' name="mode">                          Sauvola Thresholding    </option>
+                            </select>
+                        </div>   
+                    </div>
+                    <div class="wrap-input100 validate-input" data-validate="Image file is required" id="input">
+                        <input class="input100" id="image-source" name="file" onchange="previewImage();" type="file" alt="Input Image" accept="image/jpeg,image/jpg,image/png">
+                        <span class="focus-input100"></span>
+                        <span class="symbol-input100">
+                            <i class="fa fa-file" aria-hidden="true"></i>
+                        </span>
+                    </div>
+                </div>
+                <div class="container-login100-form-btn">
+                    <button class="login100-form-btn" type="submit">
+                        Execute
+                    </button>
+            </form>
+    <br<br><br>>        
+    <!-- grid-section -->
+    <section class="contact-section centred" style="padding-top: 10px; padding-left: auto;">
+        <div class="container">
+            <div class="divTable" >
+            <div class="divTableBody justify-content-center">
+            <div class="divTableRow">                
+                <div class="divTableCell"style="width: 3%;"></div>
+                <div class="divTableCell" style="width: 50%;">
+                    <div class="sec-title" style="font-size: 40px;">Last Query</div>
+                    <div>
+                        <img style="padding-top: 15%;padding-bottom: 15%;width: 60%;"
+                            src="{{ url_for('static', filename='images/query.jpg') }}">
+                    </div>
+                </div>
+                <div class="divTableCell"style="width: 5%;"></div>
+                <div class="divTableCell" style="width: 50%;">
+                    <div class="sec-title" style="font-size: 40px;">Result</div><br>
+                    <img style="padding-top: 15%;padding-bottom: 15%;width: 70%;"
+                    src="{{ url_for('static', filename='images/result.jpg') }}">
+                </div>
+            </div>
+            </div>
+            </div>
+    </section>
+    <!-- grid-section end -->
+
+    {% endblock %}
